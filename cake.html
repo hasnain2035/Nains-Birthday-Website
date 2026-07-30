@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Cake</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎉Happy&nbsp;Birthday🎉</h1>
+
+    <div class="cake">
+
+        <div class="candles">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+
+        <div class="icing"></div>
+
+        <div class="layer top"></div>
+        <div class="layer middle"></div>
+        <div class="layer bottom"></div>
+
+        <div class="cherry c1"></div>
+        <div class="cherry c2"></div>
+        <div class="cherry c3"></div>
+        <div class="cherry c4"></div>
+        <div class="cherry c5"></div>
+
+    </div>
+
+    <h2>🎂 Have a Wonderful Birthday! ❤️</h2>
+
+    <br>
+
+    <a href="index.html">
+        <button class="btn">🏠 Back to Home</button>
+    </a>
+
+</div>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+window.onload = function () {
+
+    var duration = 10000;
+    var end = Date.now() + duration;
+
+    (function frame() {
+
+        confetti({
+            particleCount: 8,
+            angle: 60,
+            spread: 70,
+            origin: { x: 0 }
+        });
+
+        confetti({
+            particleCount: 8,
+            angle: 120,
+            spread: 70,
+            origin: { x: 1 }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+
+    })();
+
+};
+</script>
+
+</body>
+</html>
